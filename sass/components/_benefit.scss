@@ -1,0 +1,60 @@
+/*Наші переваги*/
+.benefit {
+    display: flex;
+    gap: 30px;
+    align-content: center;
+    flex-wrap: wrap;   
+    
+    // padding-top: 60px;
+    // padding-bottom: 60px;
+}
+
+.benefit__item {
+    @media screen and (min-width: 768px) {
+    width: calc((100% - 30px)/2);
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px)/4);
+    }
+}
+
+.benefit__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.benefit__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: var(--btn-cl);
+    border-radius: 4px;
+}
+
+.benefit__title {
+    text-align: center;
+    // @media screen and (min-width: 768px) {
+    // text-align: center;
+    // }
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--main-txt-cl);
+}
+
+.benefit__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--light-txt-cl);
+}

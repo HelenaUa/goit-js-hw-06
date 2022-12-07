@@ -1,0 +1,21 @@
+:root {
+    /*Fonts*/
+    --main-font: Roboto, sans-serif;
+    --secondary-font: Raleway, sans-serif;
+
+    /*Text colors*/
+    --main-txt-cl: #212121;
+    --light-txt-cl: #757575;
+    --accent-txt-cl: #2196f3;
+
+    /*Background colors*/
+    --main-bg-cl: #f5f5f5;
+    --accent-bg-cl: #2f303a;
+    --white-txt-cl: #ffffff;
+
+    /*others*/
+    --btn-hover-cl: #188ce8;
+    --btn-cl: #f5f4fa;
+
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
