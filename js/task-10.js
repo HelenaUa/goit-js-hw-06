@@ -36,7 +36,7 @@ console.log(boxEl);
 btnCreate.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
 
-function createBoxes(amount) {
+function createBoxes(amount) { 
   let divWidth = 30;
   let divHeight = 30;
   let step = 10;
@@ -52,11 +52,14 @@ function createBoxes(amount) {
     // divWidth += step;
     // divHeight += step;
     elements.push(div);
+    
   };
   boxEl.append(...elements);
-};
-
+  };
+    
 function destroyBoxes(event) {
   inputEl.value = " ";
   boxEl.innerHTML = [];
 };
+
+
