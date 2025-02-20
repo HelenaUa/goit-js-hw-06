@@ -18,7 +18,8 @@
 // Все элементы должены иметь случайный цвет фона в формате HEX. 
 // Используй готовую функцию getRandomHexColor для получения цвета.
 
-// Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
+// Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все 
+// созданные элементы.
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -33,33 +34,30 @@ console.log(btnDestroy);
 const boxEl = document.querySelector("#boxes");
 console.log(boxEl);
 
-btnCreate.addEventListener("click", createBoxes);
+btnCreate.addEventListener("click", () => createBoxes(Number(inputEl.value)));
 btnDestroy.addEventListener("click", destroyBoxes);
 
-function createBoxes(amount) { 
-  let divWidth = 30;
-  let divHeight = 30;
-  let step = 10;
-
+function createBoxes(amount) {
+  boxEl.innerHTML = ""; // Очищуємо перед додаванням (щоб не було накопичення)
+  
+  let divSize = 30; // Початковий розмір
+  
   const elements = [];
   
-  for (let i = 1; i <= 100; i += 1) {
+  for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
-    div.style.width = '"${divWidth}" + "${step}"';
-    div.style.height = '"${divHeight}" + "${step}"';
+    div.style.width = `${divSize}px`;
+    div.style.height = `${divSize}px`;
     div.style.backgroundColor = getRandomHexColor();
-    div.textContent = i;
-    // divWidth += step;
-    // divHeight += step;
+    divSize += 10; // Збільшуємо розмір для наступного елемента
     elements.push(div);
-    
-  };
+  }
+  
   boxEl.append(...elements);
-  };
-    
-function destroyBoxes(event) {
-  inputEl.value = " ";
-  boxEl.innerHTML = [];
 };
 
+function destroyBoxes() {
+  inputEl.value = ""; // Очищаємо поле вводу
+  boxEl.innerHTML = ""; // Очищаємо контейнер
+};
 

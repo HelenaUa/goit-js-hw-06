@@ -8,8 +8,10 @@
 // />
 
 // Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
-// Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
-// Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
+// Если введено подходящее количество символов, то border инпута становится зелёным, 
+// если неправильное - красным.
+// Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили 
+// в исходные файлы задания.
 // #validation-input {
 //   border: 3px solid #bdbdbd;
 // }
@@ -30,7 +32,7 @@ console.log(inputValid);
 const inputInvalid = document.querySelector("#validation-input.invalid");
 console.log(inputInvalid);
 
-inputEl.addEventListener('blur', onBlur ) 
+inputEl.addEventListener('blur', onBlur); 
 function onBlur(event) {
     const text = event.target.value;
     if (text.length === + inputLength) {

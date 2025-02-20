@@ -4,15 +4,16 @@
 
 const categoriesItems = document.querySelectorAll("#categories li.item");
 console.log("Number of categories:", categoriesItems.length);
-// Number of categories: 3
 
 categoriesItems.forEach((category) => {
     const titleOfCategory = category.firstElementChild;
     console.log("Category:", titleOfCategory.textContent);
 
-    const quantityOfCategory = titleOfCategory.nextElementSibling.children;
+    const quantityOfCategory = titleOfCategory.nextElementSibling.children; // category.querySelector("ul").children
     console.log("Elements:", quantityOfCategory.length);
 })
+// Number of categories: 3
+
 // Category: Animals
 // Elements: 4
 
